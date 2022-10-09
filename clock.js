@@ -10,26 +10,17 @@ function getCurrentTime() {
   } else {
     session.innerHTML = "Am";
   }
-  if (hrs > 12) {
-    hrs - 12;
-  }
-  if (hrs < 10) {
-    "0" + hrs;
-  }
-  if (mins < 10) {
-    "0" + mins;
-  }
-  if (sec < 10) {
-    "0" + sec;
-  }
-
+  hrs = hrs > 12 ? hrs - 12 : hrs;
+  hrs = hrs < 10 ? "0" + hrs : hrs;
+  mins = mins < 10 ? "0" + mins : mins;
+  sec = sec < 10 ? "0" + sec : sec;
   document.getElementById("hours").innerHTML = hrs;
   document.getElementById("minutes").innerHTML = mins;
   document.getElementById("seconds").innerHTML = sec;
 
   // document.getElementById("date").innerHTML = date;
 }
-setInterval(getCurrentTime, 20);
+setInterval(getCurrentTime);
 console.log(getCurrentTime());
 console.log(date);
 
