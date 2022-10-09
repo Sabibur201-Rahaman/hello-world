@@ -13,7 +13,7 @@ function getCurrentTime() {
   hrs = hrs > 12 ? hrs - 12 : hrs;
   hrs = hrs < 10 ? "0" + hrs : hrs;
   mins = mins < 10 ? "0" + mins : mins;
-  sec = sec < 10 ? "0" + sec : sec;
+  sec=sec<10?'0'+sec:sec
   document.getElementById("hours").innerHTML = hrs;
   document.getElementById("minutes").innerHTML = mins;
   document.getElementById("seconds").innerHTML = sec;
